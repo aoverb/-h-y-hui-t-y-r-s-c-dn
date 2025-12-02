@@ -99,7 +99,7 @@
                 <span class="loader" aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div></span>
               </span>
             </button>
-            <div class="hint">最长允许 64 字</div>
+            <div class="hint">最长允许 128 字</div>
           </div>
         </div>
 
@@ -228,7 +228,7 @@
         const f = sanitize(document.getElementById('format').value);
         const i = sanitize(document.getElementById('input').value);
         if(!f || !i){ showToast('请填写好梗和烂梗'); return; }
-        if(utf8Len(f) > 64 || utf8Len(i) > 64){ showToast('格式或输入超过 64 字符限制'); return; }
+        if(utf8Len(f) > 128 || utf8Len(i) > 128){ showToast('格式或输入超过 128 字符限制'); return; }
         callGenerate(f, i);
       });
 
